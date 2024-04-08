@@ -17,6 +17,6 @@ class HomePage(BasePage):
 
     def go_to_create_account_page(self):
         logger.info("Going to sign in page")
-        create_account_button = self.find_element_with_wait(*self.locator.CREATE_ACCOUNT_BUTTON)
+        create_account_button = self.find_element_with_wait(self.locator.CREATE_ACCOUNT_BUTTON)
         create_account_button.click()
         return CreateAccountPage(self.driver)
