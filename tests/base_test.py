@@ -18,6 +18,7 @@ class BaseTest(unittest.TestCase):
         options = Options()
         options.add_argument("--disable-extensions")
         options.add_argument("--start-maximized")
+        options.add_argument("--force-device-scale-factor=1")
         self.driver = webdriver.Chrome(options=options)
         self.driver.get(BASE_PAGE_URL)
         self.accept_consent_screen()

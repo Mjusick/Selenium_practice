@@ -22,4 +22,3 @@ class CreateAccountPage(BasePage):
         logger.info("Submitting account creation form.")
         submit_form_button = self.find_element_with_wait(self.locators.SUBMIT_FORM_BUTTON)
         submit_form_button.click()
-
