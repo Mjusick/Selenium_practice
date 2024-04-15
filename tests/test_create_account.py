@@ -9,7 +9,7 @@ class TestCreateAccount(BaseTest):
     def test_create_account(self):
         home_page = HomePage(self.driver)
         create_account_page = home_page.go_to_create_account_page()
-        client: Client = Client("sample_janusz", "zolty", "januszek.zolty@testy.com", "Kurczaki1!")
+        client: Client = Client("sample_name", "sample_last_name", "testowy@testy.com", "Test123!")
         create_account_page.fill_account_creation_form(client)
         create_account_page.submit_account_creation_form()
         account_details_page = AccountDetailsPage(self.driver)
